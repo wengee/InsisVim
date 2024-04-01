@@ -1,1 +1,3 @@
-require("insis").setup({})
+require("insis").setup({
+  colorscheme = "onedark",
+})

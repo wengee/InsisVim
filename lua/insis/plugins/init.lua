@@ -252,7 +252,7 @@ return {
   { "shaunsingh/nord.nvim" },
 
   -- onedark
-  { "ful1e5/onedark.nvim" },
+  -- { "ful1e5/onedark.nvim" },
 
   -- nightfox
   { "EdenEast/nightfox.nvim" },
@@ -262,6 +262,9 @@ return {
 
   -- kanagawa
   { "rebelot/kanagawa.nvim" },
+
+  -- onedarkpro
+  { "olimorris/onedarkpro.nvim" },
 
   --------------------- git ---------------------------------------------------
 
