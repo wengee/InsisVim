@@ -73,7 +73,7 @@ keymap("x", "p", '"_dP')
 
 if cfg.s_windows ~= nil and cfg.s_windows.enable then
   local skey = cfg.s_windows.keys
-  keymap("n", "s", "")
+  -- keymap("n", "s", "")
   keymap("n", skey.split_vertically, ":vsp<CR>")
   keymap("n", skey.split_horizontally, ":sp<CR>")
   keymap("n", skey.close, "<C-w>c")

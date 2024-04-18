@@ -1,5 +1,33 @@
 require("insis").setup({
-  colorscheme = "onedark",
+  colorscheme = "tokyonight",
+  php = {
+    enable = true,
+    format_on_save = true,
+  },
+  bash = {
+    enable = true,
+    format_on_save = true,
+  },
+  json = {
+    enable = true,
+    format_on_save = true,
+  },
+  python = {
+    enable = true,
+    format_on_save = true,
+  },
+  yaml = {
+    enable = true,
+    format_on_save = true,
+  },
+  markdown = {
+    enable = true,
+    format_on_save = true,
+  },
+  toml = {
+    enable = true,
+    format_on_save = true,
+  },
   frontend = {
     enable = true,
     ---@type "eslint" | false

@@ -53,10 +53,10 @@ local UserConfig = {
     n_save = "<leader>w", -- :w
     n_force_quit = "<leader>q", -- :qa!
     -- quick move
-    n_v_5j = "<C-j>",
-    n_v_5k = "<C-k>",
-    n_v_10k = "<C-u>",
-    n_v_10j = "<C-d>",
+    n_v_5j = "J",
+    n_v_5k = "K",
+    n_v_10k = "U",
+    n_v_10j = "D",
     terminal_to_normal = "<Esc>",
   },
 
@@ -69,17 +69,17 @@ local UserConfig = {
     enable = true,
     keys = {
       -- left / right cycle
-      prev = "<C-h>",
-      next = "<C-l>",
+      prev = "<leader>bh",
+      next = "<leader>bl",
       -- close current buffer
-      close = "<C-w>",
+      close = "<leader>bc",
       -- close = "<leader>bc",
       -- close all left / right tabs
-      close_left = "<leader>bh",
-      close_right = "<leader>bl",
+      close_left = "<leader>bch",
+      close_right = "<leader>bcl",
       -- close all other tabs
-      close_others = "<leader>bo",
-      close_pick = "<leader>bp",
+      close_others = "<leader>bco",
+      close_pick = "<leader>bcp",
     },
   },
 
@@ -87,23 +87,23 @@ local UserConfig = {
   s_windows = {
     enable = true,
     keys = {
-      split_vertically = "sv",
-      split_horizontally = "sh",
+      split_vertically = "<leader>|",
+      split_horizontally = "<leader>-",
       -- close current
-      close = "sc",
+      close = "<leader>wc",
       -- close others
-      close_others = "so",
+      close_others = "<leader>wo",
       -- jump between windows
       jump_left = { "<A-h>", "<leader>h" },
       jump_right = { "<A-l>", "<leader>l" },
       jump_up = { "<A-k>", "<leader>k" },
       jump_down = { "<A-j>", "<leader>j" },
       -- control windows size
-      width_decrease = "s,",
-      width_increase = "s.",
-      height_decrease = "sj",
-      height_increase = "sk",
-      size_equal = "s=",
+      width_decrease = "<leader>w-",
+      width_increase = "<leader>w+",
+      height_decrease = "<leader>h-",
+      height_increase = "<leader>h+",
+      size_equal = "<leader>s=",
     },
   },
 
@@ -111,12 +111,12 @@ local UserConfig = {
   s_tab = {
     enable = false,
     keys = {
-      split = "ts",
-      prev = "th",
-      next = "tl",
-      first = "tj",
-      last = "tk",
-      close = "tc",
+      split = "<leader>ts",
+      prev = "<leader>th",
+      next = "<leader>tl",
+      first = "<leader>tj",
+      last = "<leader>tk",
+      close = "<leader>tc",
     },
   },
 
@@ -158,15 +158,18 @@ local UserConfig = {
   nvimTree = {
     enable = true,
     keys = {
-      toggle = { "<A-m>", "<leader>m" },
+      toggle = { "<A-e>", "<leader>e" },
       refresh = "R",
+      search = "S",
+      expand_all = "E",
+      collapse_all = "W",
       -- open / close --
-      edit = { "o", "<2-LeftMouse>" },
+      edit = { "o", "<CR>", "<2-LeftMouse>" },
       close = "<BS>", -- close parent folder
-      system_open = "<CR>",
-      vsplit = "sv",
-      split = "sh",
-      tabnew = "st",
+      system_open = "O",
+      vsplit = "ov",
+      split = "oh",
+      tabnew = "ot",
       -- movement --
       parent_node = "P",
       first_sibling = "K",
@@ -434,6 +437,14 @@ local UserConfig = {
     -- pip install black
     -- asdf reshim python
     formatter = "black",
+    format_on_save = false,
+  },
+
+  ---@class PhpConfig
+  php = {
+    enable = false,
+    lsp = "intelephense",
+    formatter = "phpcsfixer",
     format_on_save = false,
   },
 

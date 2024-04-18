@@ -9,6 +9,9 @@ if nvimTree and cfg and cfg.enable then
       return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
     end
     keymap("n", cfg.keys.refresh, api.tree.reload, opts("Refresh"))
+    keymap("n", cfg.keys.search, api.tree.search_node, opts("Search"))
+    keymap("n", cfg.keys.expand_all, api.tree.expand_all, opts("Expand All"))
+    keymap("n", cfg.keys.collapse_all, api.tree.collapse_all, opts("Collapse"))
 
     -- open / close --
     keymap("n", cfg.keys.edit, api.node.open.edit, opts("Open"))

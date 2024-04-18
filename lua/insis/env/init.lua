@@ -69,6 +69,9 @@ local init = function(userConfig)
   if userConfig.bash.enable then
     table.insert(enabledEnv, require("insis.env.bash")(userConfig.bash))
   end
+  if userConfig.php.enable then
+    table.insert(enabledEnv, require("insis.env.php")(userConfig.php))
+  end
   if userConfig.python.enable then
     table.insert(enabledEnv, require("insis.env.python")(userConfig.python))
   end
